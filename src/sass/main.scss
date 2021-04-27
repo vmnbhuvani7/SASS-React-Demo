@@ -1,0 +1,52 @@
+@import 'mixin';
+@import 'var';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// html {
+//     // font-size: 50%;
+// }
+
+.main_header {
+    @include flexprops;
+    width: 100vw;
+    height: 100vh;
+    // display: grid;
+    // place-items: center;
+    
+    background: $bg-color;
+
+    h1 {
+        @include commonCode(5rem, uppercase);
+        &:hover {
+            color: white;
+        } 
+        &::after {
+            content: " vmn";
+        }
+    }
+    p {
+        @include commonCode(1rem, capitalize);
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+.main_header{
+    &__header{
+        background-color: red;
+        width: 100%;
+    }
+}
+
+// 1. operator use
+// 2. variable use
+// 3. nesting (ex:- h1 and p)
+// 4. mixing
+// 5. parameter
+// 6. partial
